@@ -1,0 +1,11 @@
+<h1> Restaurants index page </h1>
+
+<%@restaurants.each do |restaurant| %>
+<ul>
+<li><%=restaurant.name%></li>
+<%=link_to restaurant.name, restaurant_path(restaurant.id) %>
+</ul>
+<%end %>
+
+
+<%= link_to "Add a restaurant", new_restaurant_path %>
